@@ -1,0 +1,43 @@
+.container {
+    width: var(--page-width);
+    margin: 0 auto;
+}
+
+.header {
+    background-color: var(--color-blue);
+    color: var(--color-light);
+    font-size: var(--font-size-xxl);
+}
+
+.branding {
+    padding: var(--padding-vspace) var(--padding-hspace);
+}
+
+.nav {
+    background-color: var(--color-silver);
+    overflow: hidden;
+}
+
+.navEntry {
+    padding: var(--padding-vspace) var(--padding-hspace);
+    cursor: pointer;
+    float: left;
+}
+
+.navEntry:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navEntrySelected {
+    composes: navEntry;
+}
+
+.navEntrySelected,
+.navEntrySelected:hover {
+    background-color: var(--color-blue);
+    color: var(--color-light);
+}
+
+.content {
+    padding: calc(var(--padding-vspace) * 2) var(--padding-hspace);
+}
