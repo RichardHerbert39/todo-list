@@ -8,6 +8,7 @@ The package is built using the following technologies:
 - [Create React App](https://create-react-app.dev/)
 - [React](https://reactjs.org/)
 - [RxJs](https://rxjs-dev.firebaseapp.com/)
+- [CSS modules](https://github.com/css-modules/css-modules)
 
 
 ## Starting development
