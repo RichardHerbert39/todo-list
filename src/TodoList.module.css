@@ -1,0 +1,22 @@
+.todo {
+    background-color: var(--color-silver);
+    padding: var(--padding-vspace) var(--padding-hspace);
+    margin-bottom: var(--padding-vspace); 
+}
+
+.checkbox {
+    margin-right: var(--padding-hspace);
+}
+
+.delete {
+    margin-left: var(--padding-hspace);
+}
+
+.addTodo, .delete {
+    cursor: pointer;
+    color: var(--color-loading);
+}
+
+.loading {
+    color: var(--color-loading);
+}

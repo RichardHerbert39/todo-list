@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as mockApi from "./api";
 import { Subscription } from "rxjs";
+import styles from "./TodoList.module.css"
 
 let callEndpointInterval: NodeJS.Timeout;
 let todoListSubscription: Subscription;
@@ -24,21 +25,21 @@ class TodoList extends Component {
         dataFetched ? 
           <>
             {todoListItems.length > 0 ? <>
-              {todoListItems.map(item => <div key={item.id}>
-                <input onClick={() => this.handleCheckboxClick(item)}
+              {todoListItems.map(item => <div key={item.id} className={styles.todo}>
+                <input className={styles.checkbox} onClick={() => this.handleCheckboxClick(item)}
                   type="checkbox"
                   defaultChecked={item.isDone}></input>
                 {item.message}
-                <span onClick={() => this.handleDeleteTodo(item.id)}>delete</span>
+                <span className={styles.delete} onClick={() => this.handleDeleteTodo(item.id)}>delete</span>
               </div>)}
             </> : 
             <p><em>No todos.</em></p>
             }
             <p>
-              <span onClick={() => this.handleAddTodo()}>+ Add todo</span>
+              <span className={styles.addTodo} onClick={() => this.handleAddTodo()}>+ Add todo</span>
             </p>
           </> : 
-          <p>Loading...</p>
+          <p className={styles.loading}>Loading...</p>
       }
     </>;
   }
